@@ -29,4 +29,29 @@ class Api {
                 console.log(err);
             })
     }
+
+    firstInitWeather(){
+        return   fetch(`https://api.openweathermap.org/data/2.5/weather?q=Москва&appid=${this.config.key}&lang=ru`)
+            .then(res => {
+                if (res.ok) {
+                    return res.json()
+                }
+                return Promise.reject(`Что то пошло не так ${res.status}`)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+    firstInitTime(){
+        return   fetch(`https://worldtimeapi.org/api/timezone/Europe/Moscow`)
+            .then(res => {
+                if (res.ok) {
+                    return res.json()
+                }
+                return Promise.reject(`Что то пошло не так ${res.status}`)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 }

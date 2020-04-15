@@ -13,6 +13,11 @@ const searchForm = document.querySelector('#searchForm');
 
 const weatherData = {weatherTitle, weatherTime, weatherTemp, weatherPressure, weatherWind, weatherType};
 
+
+
+
+
+
 /* Button */
 const buttonSearch = document.querySelector('#search');
 
@@ -31,9 +36,15 @@ const api = new Api(config); // api
 
 const weather = new Weather(weatherData, searchForm, api, spinnerPlace);
 
+/* Init */
+const init = new Init(weatherData, api, spinnerPlace);
+
 
 // События
 
 buttonSearch.addEventListener('click', weather.updateWeather.bind(weather));
+
+/* Первая иницилизация */
+init.getTime();
 
 
