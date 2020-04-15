@@ -2,8 +2,8 @@ class Init {
     constructor(weatherPage, api, spinner) {
         // тело конструктора
         this.weatherPage = weatherPage;
-        this.api = api;
         this.spinner = spinner;
+        this.api = api;
     }
     renderLoading = (isLoading) =>{
         if (isLoading){
