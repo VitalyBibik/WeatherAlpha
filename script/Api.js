@@ -5,7 +5,7 @@ class Api {
     }
 
     getWeather(city){
-    return  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.config.key}&lang=ru`)
+    return  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.config.key}&lang=ru`)
                 .then(res => {
                     if (res.ok) {
                         return res.json()
@@ -18,7 +18,7 @@ class Api {
     }
 
     getTime(city){
-     return   fetch(`http://worldtimeapi.org/api/timezone/Europe/${city}`)
+     return   fetch(`https://worldtimeapi.org/api/timezone/Europe/${city}`)
             .then(res => {
                 if (res.ok) {
                     return res.json()
