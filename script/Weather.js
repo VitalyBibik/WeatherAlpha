@@ -1,5 +1,5 @@
 class Weather {
-    constructor(weatherPage, searchForm, api, spinner) {
+    constructor(weatherPage, api, spinner) {
         // тело конструктора
         this.weatherPage = weatherPage;
         this.searchForm = searchForm;
@@ -27,13 +27,13 @@ class Weather {
                     this.weatherPage.weatherTitle.textContent = `Город: ${data.name}`;
                     this.weatherPage.weatherTemp.textContent = `Температура: ${Math.round(data.main.temp - 273)}`;
                     this.weatherPage.weatherPressure.textContent = `Атмосферное давление: ${data.main.pressure} P`;
-                    this.weatherPage.weatherWind.textContent =`Скорость ветра: ${data.wind.speed} mph`;
+                    this.weatherPage.weatherWind.textContent =`Скорость ветра: ${data.wind.speed} м/c`;
                     this.weatherPage.weatherType.textContent =`Тип погоды: ${data.weather[0]['description']}`;
 
                 })
                 .catch((err) => {
                     console.log(err);
-                })
+                });
             this.api.getTime(input)
                 .then(data =>{
                     let time = data.datetime;
