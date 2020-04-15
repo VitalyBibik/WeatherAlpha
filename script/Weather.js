@@ -1,5 +1,5 @@
 class Weather {
-    constructor(weatherPage, api, searchForm, spinner) {
+    constructor(weatherPage, searchForm, api, spinner) {
         // тело конструктора
         this.weatherPage = weatherPage;
         this.searchForm = searchForm;
