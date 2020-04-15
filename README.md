@@ -12,4 +12,7 @@
 ### Тип погоды: 
 ### Далее отправляются пользователю.
 
-##
+##![1](https://drive.google.com/open?id=1WQaad7vkqzJ7-Q7wYh7JBHjnM7uOfUCc)
+
+
+
